@@ -1,0 +1,30 @@
+# Ambiente virtual
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Dataset do IMDb: baixado/gerado automaticamente por src/download_dataset.py
+# e src/data_loader.py. Nao deve ir pro repositorio (arquivos grandes e
+# regeneraveis a qualquer momento rodando o programa).
+data/raw/
+data/processed/
+
+# Feedback e estado evolutivo do GA: sao dados pessoais de cada usuario.
+# Cada pessoa que baixar o repositorio deve comecar com seu proprio
+# catalogo de gostos, sem herdar nem se misturar com o feedback/estado de
+# quem fez commit do codigo.
+feedback/
+state/
+
+# IDE / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
