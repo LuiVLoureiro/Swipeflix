@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+
+@theme {
+  --color-surface: #e9edf3;
+  --color-surface-2: #dde2ea;
+  --color-ink: #2c2f36;
+  --color-ink-soft: #6b7280;
+  --color-accent: #6d5ef7;
+  --color-like: #22c55e;
+  --color-nope: #fb7185;
+  --font-sans: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+:root {
+  --neu-light: rgba(255, 255, 255, 0.85);
+  --neu-dark: rgba(163, 177, 198, 0.55);
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-surface: #1c1f27;
+    --color-surface-2: #242833;
+    --color-ink: #e5e7eb;
+    --color-ink-soft: #9aa1ae;
+    --color-accent: #a799fb;
+    --neu-light: rgba(255, 255, 255, 0.05);
+    --neu-dark: rgba(0, 0, 0, 0.65);
+  }
+}
+
+@utility neu-raised {
+  background-color: var(--color-surface);
+  box-shadow: 8px 8px 18px var(--neu-dark), -8px -8px 18px var(--neu-light);
+}
+
+@utility neu-inset {
+  background-color: var(--color-surface);
+  box-shadow: inset 5px 5px 12px var(--neu-dark), inset -5px -5px 12px var(--neu-light);
+}
+
+@utility neu-pill {
+  background-color: var(--color-surface);
+  box-shadow: 3px 3px 8px var(--neu-dark), -3px -3px 8px var(--neu-light);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+}
